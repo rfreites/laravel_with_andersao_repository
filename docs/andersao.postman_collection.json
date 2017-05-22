@@ -1,0 +1,143 @@
+{
+	"variables": [],
+	"info": {
+		"name": "andersao",
+		"_postman_id": "aefc2720-3eb8-f09a-4c66-3dde8784553e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"url": "http://localhost:8000/posts",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"url": "http://localhost:8000/posts?title=amigo new&body=lorem ipsum bla bla&author=ronny",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"url": "http://localhost:8000/posts/2?title=amigo update 2&body=lorem ipsum bla bla&author=ronny",
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"request": {
+				"url": "http://localhost:8000/posts/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"url": "http://localhost:8000/posts/3",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"url": "http://localhost:8000/posts?search=amigo",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "?search=John&searchFields=name:like",
+			"request": {
+				"url": "http://localhost:8000/posts?search=ron&searchFields=author:like",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "?search=john@gmail.com&searchFields=email:=",
+			"request": {
+				"url": "http://localhost:8000/posts?search=amigo xavier&searchFields=title:=",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "?search=name:John Doe;email:john@gmail.com",
+			"request": {
+				"url": "http://localhost:8000/posts?search=title:amigo xavier;author:ronny",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "?search=name:John;email:john@gmail.com&searchFields=name:like;email:=",
+			"request": {
+				"url": "http://localhost:8000/posts?search=title:amigo xavier;author:ronny&searchFields=title:like;author:=",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "?filter=id;name&orderBy=id&sortedBy=desc",
+			"request": {
+				"url": "http://localhost:8000/posts?filter=title;author",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "?filter=title;author",
+			"request": {
+				"url": "http://localhost:8000/posts?filter=title;author",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
